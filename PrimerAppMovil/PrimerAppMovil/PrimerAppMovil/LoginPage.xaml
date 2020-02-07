@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PrimerAppMovil.LoginPage">
+<ScrollView>
+    <StackLayout Padding="10">
+        <StackLayout Orientation="Horizontal" Padding="20,50,20,20"  >
+            <Label Text="Login"
+               FontSize="45"
+                   HorizontalOptions="Fill"
+   
+               />
+            <Label Text="Sign up"
+               HorizontalOptions="EndAndExpand"
+                   FontSize="20"
+                   Padding="0,20,0,0"
+               />
+
+        </StackLayout>
+        <Image Source="Person" HeightRequest="200" WidthRequest="200"/>
+
+        <Entry Placeholder="Username or Email Address"/>
+        <Entry Placeholder="Password"/>
+        <StackLayout Orientation="Horizontal">
+            <Image Source="Setting" HorizontalOptions="StartAndExpand"/>
+            <Image Source="eye" HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+        <Button ImageSource="check"
+                    Text="Login"
+                    CornerRadius="30"
+                    Margin="30"/>
+        <Label Text="Log in with" Margin="20" HorizontalOptions="Center"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Image Source="google" HeightRequest="50" WidthRequest="50"/>
+            <Image Source="git" HeightRequest="50" WidthRequest="50"/>
+            <Image Source="twitter" HeightRequest="50" WidthRequest="50"/>
+            <Image Source="FBicon" HeightRequest="50" WidthRequest="50"/>
+        </StackLayout>
+
+
+    </StackLayout>
+</ScrollView>
+
+</ContentPage>

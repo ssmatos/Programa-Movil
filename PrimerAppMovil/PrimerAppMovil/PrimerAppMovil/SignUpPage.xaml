@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PrimerAppMovil.SignUpPage">
+    <ScrollView>
+        <StackLayout Padding="10">
+            <StackLayout Orientation="Horizontal" Padding="20,50,20,20"  >
+                <Label Text="Sign Up"
+               FontSize="45"
+                   HorizontalOptions="Fill"
+                   TextColor="Black"
+   
+               />
+                <Label Text="Login"
+               HorizontalOptions="EndAndExpand"
+                   FontSize="20"
+                   Padding="0,20,0,0"
+               />
+
+            </StackLayout>
+            <Image Source="CamaraF" HeightRequest="200" WidthRequest="200"/>
+
+            <Entry Placeholder="Email Address"/>
+            <Entry Placeholder="Username"/>
+            <Entry Placeholder="Password"/>
+            <Image Source="eye" HorizontalOptions="End"/>
+            <Entry Placeholder="Repeat Password"/>
+            <Image Source="eye" HorizontalOptions="End"/>
+            <Button ImageSource="check"
+                    Text="Sign Up"
+                    CornerRadius="30"
+                    Margin="30"/>
+            <Label Text="Terms of Service" Padding="50" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
