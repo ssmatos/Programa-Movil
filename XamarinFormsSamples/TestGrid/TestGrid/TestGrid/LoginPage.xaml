@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TestGrid.LoginPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="10">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.5*"/>
+                    <ColumnDefinition Width="2.5*"/>
+                    <ColumnDefinition Width="2.5*"/>
+                    <ColumnDefinition Width="2.5*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Login"
+                   Grid.Row="6"
+                   Grid.Column="0"
+                   FontSize="32"
+                   
+                   />
+                <Label Text="Sign Up"
+                    Grid.Row="6"
+                    Grid.Column="3"
+                       FontSize="25">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="HighwayToSignUp"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Image Source="ic_person" 
+                   Grid.Row="7"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2" 
+                   Grid.RowSpan="3" 
+                   HeightRequest="200"
+                   WidthRequest="200"
+                   HorizontalOptions="CenterAndExpand"/>
+                <Entry Placeholder="Username or Email Address"
+                   Grid.Row="10"
+                   Grid.Column="0"
+                   x:Name="mail"
+                   Grid.ColumnSpan="4"/>
+                <Entry Placeholder="Password"
+                   IsPassword="True"
+                   x:Name="EntryPass"
+                   Grid.Row="11"
+                   Grid.Column="0" 
+                   Grid.ColumnSpan="4"/>
+                <Image Source="PasswordEye"
+                   Grid.Row="11"
+                   Grid.Column="3"
+                   x:Name="imagePassword"
+                   HorizontalOptions="EndAndExpand"
+                   HeightRequest="30">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PasswordVisibility"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Button Text="Log in"
+                    Grid.Row="13" 
+                    Grid.Column="1" 
+                    Grid.ColumnSpan="2" 
+                    CornerRadius="30" 
+                    ImageSource="check"
+                    Clicked="ConfirmationLog">
+                </Button>
+                <Label Text="Login with" 
+                   Grid.Row="15"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2" 
+                   FontSize="20" 
+                   HorizontalOptions="Center" />
+                <Image Source="Googleplus" 
+                   Grid.Row="16"
+                   Grid.Column="0" 
+                   HeightRequest="10" 
+                   WidthRequest="10"/>
+                <Image Source="github"
+                   Grid.Row="16"
+                   Grid.Column="1" 
+                   HeightRequest="50"
+                   WidthRequest="50"/>
+                <Image Source="twitter" 
+                   Grid.Row="16" 
+                   Grid.Column="2" 
+                   HeightRequest="50"
+                   WidthRequest="50"/>
+                <Image Source="FBicon" 
+                   Grid.Row="16"
+                   Grid.Column="3" 
+                   HeightRequest="50"
+                   WidthRequest="50"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
