@@ -57,6 +57,8 @@
                Grid.ColumnSpan="5" />
 
             <Entry Placeholder="Password"
+                   IsPassword="True"
+                   
                 Grid.Row="7"
                Grid.RowSpan="1"
                x:Name="Pass"
@@ -64,6 +66,7 @@
                Grid.ColumnSpan="5" />
 
             <Entry Placeholder="Repeat Password"
+                   IsPassword="True"
                 Grid.Row="8"
                x:Name="Rpass"
                 Grid.Column="0"
@@ -71,11 +74,17 @@
 
             <Image Source="PasswordEye"
                    Grid.Row="7"
+                   x:Name="PassImage"
                    Grid.Column="4"
                    HorizontalOptions="EndAndExpand"
-                        HeightRequest="30"/>
+                        HeightRequest="30"
+                   <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Image.GestureRecognizers> 
+            </Image>
 
             <Image Source="PasswordEye"
+                   x:Name="PassImage2"
                    Grid.Row="8"
                    Grid.Column="4"
                    HorizontalOptions="EndAndExpand"

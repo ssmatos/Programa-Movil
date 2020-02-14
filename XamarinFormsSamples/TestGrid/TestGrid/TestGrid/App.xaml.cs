@@ -10,8 +10,8 @@ namespace TestGrid
         {
             InitializeComponent();
 
-            //MainPage = new NavigationPage(new LoginPage());
-            MainPage = new DiscoveryPage();
+            MainPage = new NavigationPage(new LoginPage());
+            //MainPage = new DiscoveryPage();
         }
 
         protected override void OnStart()

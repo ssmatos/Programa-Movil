@@ -30,5 +30,9 @@ namespace TestGrid
                 await DisplayAlert("Alert", "Null Entries", "OK");
             }
         }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+        }
     }
 }
