@@ -10,63 +10,7 @@
             android:TabbedPage.ToolbarPlacement="Bottom">
   <!--Pages can be added as references or inline-->
     <local:Home/>
-    <ContentPage Title="Discovery" IconImageSource="Discovery" Padding="20">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
-            </Grid.ColumnDefinitions>
-            <Image Source="icons8beer96" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1" HeightRequest="200" x:Name="MainBar">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TappedMainBar"/>
-                </Image.GestureRecognizers>
-            </Image>
-            <Label Text="Bar and Hotels" Grid.Row="4"  Grid.Column="0" Style="{StaticResource FontStyle}"/>
-            <Image Source="icons8meal64" Grid.Row="3" Grid.Column="2" HeightRequest="200" x:Name="MainMeal">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TappedMainMeal"/>
-                </Image.GestureRecognizers>
-            </Image>
-            <Label Text="Fine Dining" Grid.Row="4"  Grid.Column="2" Style="{StaticResource FontStyle}"/>
-            <Image Source="icons8cafe64" Grid.Row="4" Grid.Column="0" HeightRequest="200" x:Name="MainCafe">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TappedMainCafe"/>
-                </Image.GestureRecognizers>
-            </Image>
-            <Label Text="Cafes" Grid.Row="5"  Grid.Column="0" Style="{StaticResource FontStyle}"/>
-            <Image Source="Route" Grid.Row="4" Grid.Column="2" HeightRequest="150" x:Name="MainRoute">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TappedMainRoute"/>
-                </Image.GestureRecognizers>
-            </Image>
-            <Label Text="Nearby" Grid.Row="5"  Grid.Column="2" Style="{StaticResource FontStyle}"/>
-            <Image Source="FastFood" Grid.Row="5" Grid.Column="0" HeightRequest="200" x:Name="MainFood">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TappedMainFood"/>
-                </Image.GestureRecognizers>
-            </Image>
-            <Label Text="Fast Foods" Grid.Row="6"  Grid.Column="0" Style="{StaticResource FontStyle}"/>
-            <Image Source="Pizza" Grid.Row="5" Grid.Column="2" HeightRequest="200" x:Name="MainPizza">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TappedMainPizza"/>
-                </Image.GestureRecognizers>
-            </Image>
-            <Label Text="Bar and Hotels" Grid.Row="6"  Grid.Column="2" Style="{StaticResource FontStyle}"/>
-
-        </Grid>
-    </ContentPage>
+    <local:DiscoveryPageMain/>
     <local:Bookmark/>
     <local:TopFoddle/>
     <local:Profile/>

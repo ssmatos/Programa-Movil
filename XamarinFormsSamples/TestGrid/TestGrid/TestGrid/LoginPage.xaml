@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TestGrid.LoginPage">
+             x:Class="TestGrid.LoginPage"
+             Title="LoginPage">
     <ContentPage.Content>
         <ScrollView>
             <Grid Padding="10">

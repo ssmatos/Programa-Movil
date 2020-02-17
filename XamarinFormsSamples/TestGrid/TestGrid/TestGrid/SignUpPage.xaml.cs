@@ -29,10 +29,22 @@ namespace TestGrid
             {
                 await DisplayAlert("Alert", "Null Entries", "OK");
             }
+            else
+            {
+                await Navigation.PushAsync(new LoginPage());
+            }
         }
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private void PasswordVisibilitySign(object sender, EventArgs e)
         {
+            PassImage.Source = !Pass.IsPassword ? "PasswordEye" : "Hide";
+            Pass.IsPassword = !Pass.IsPassword;
+        }
+
+        private void PasswordVisibilitySignR(object sender, EventArgs e)
+        {
+            PassImage2.Source = !Rpass.IsPassword ? "PasswordEye" : "Hide";
+            Rpass.IsPassword = !Rpass.IsPassword;
         }
     }
 }
