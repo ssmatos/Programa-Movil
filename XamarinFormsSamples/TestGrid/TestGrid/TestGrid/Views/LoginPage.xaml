@@ -50,19 +50,16 @@
                    Grid.Row="10"
                    Grid.Column="0"
                    Text="{Binding Mail}"
-                   x:Name="mail"
                    Grid.ColumnSpan="4"/>
                 <Entry Placeholder="Password"
                    IsPassword="{Binding IsPassword}"
-                   x:Name="EntryPass"
                        Text="{Binding EntryPass}"
                    Grid.Row="11"
                    Grid.Column="0" 
                    Grid.ColumnSpan="4"/>
-                <Image Source="PasswordEye"
+                <Image Source="{Binding Image}"
                    Grid.Row="11"
                    Grid.Column="3"
-                   x:Name="imagePassword"
                    HorizontalOptions="EndAndExpand"
                    HeightRequest="30">
                     <Image.GestureRecognizers>

@@ -22,7 +22,7 @@ namespace TestGrid.ViewModels
 
         public LoginPageViewModel()
         {
-            IsPassword = true;
+            Image = "PasswordEye";
             ConfirmLoginCommand = new Command(async() =>
             {
                 if (string.IsNullOrEmpty(Mail) || string.IsNullOrEmpty(EntryPass))
@@ -43,6 +43,14 @@ namespace TestGrid.ViewModels
             VisibilityCommand = new Command(() =>
             {
                 IsPassword = !IsPassword ? true : false;
+                if (IsPassword)
+                {
+                    Image = "PasswordEye";
+                }
+                else
+                {
+                    Image = "Hide";
+                }
             });
 
         }

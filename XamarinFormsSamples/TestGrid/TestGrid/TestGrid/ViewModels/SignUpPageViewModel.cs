@@ -16,6 +16,7 @@ namespace TestGrid.ViewModels
         public string User { get; set; }
         public string Pass { get; set; }
         public string Rpass { get; set; }
+        public string Image { get; set; }
         public bool IsPassword { get; set; } = true;
         public Command VisibilityCommand { get; set; }
         public Command LoginCommand { get; set; }
@@ -43,6 +44,14 @@ namespace TestGrid.ViewModels
             VisibilityCommand = new Command(() =>
             {
                 IsPassword = !IsPassword ? true : false;
+                if (IsPassword)
+                {
+                    Image = "PasswordEye";
+                }
+                else
+                {
+                    Image = "Hide";
+                }
             });
         }
 

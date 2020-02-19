@@ -23,40 +23,38 @@ namespace TestGrid.ViewModels
         public MenuElements NfoodElemets { get; set; } = new MenuElements();
 
         public Command ColorChangeCommand { get; set;}
+
         public DiscoveryPageViewModel()
         {
 
             BarElemets.Title = "Bar & Hotels";
             BarElemets.SubTitle = "42 Places";
-            BarElemets.Image = "icons8beer96";
+            BarElemets.ImageSource = "icons8beer96";
 
             DinnerElemets.Title = "Fine Dining";
             DinnerElemets.SubTitle = "15 Places";
-            DinnerElemets.Image = "icons8meal64";
+            DinnerElemets.ImageSource = "icons8meal64";
 
             CafeElemets.Title = "Cafes";
             CafeElemets.SubTitle = "28 Places";
-            CafeElemets.Image = "icons8cafe64";
+            CafeElemets.ImageSource = "icons8cafe64";
 
             MapElemets.Title = "Nearby";
             MapElemets.SubTitle = "34 Places";
-            MapElemets.Image = "Nearby";
+            MapElemets.ImageSource = "Nearby";
 
             FfoodElemets.Title = "Fast Foods";
             FfoodElemets.SubTitle = "29 Places";
-            FfoodElemets.Image = "FastFood";
+            FfoodElemets.ImageSource = "FastFood";
 
             NfoodElemets.Title = "Featured Food";
             NfoodElemets.SubTitle = "21 Places";
-            NfoodElemets.Image = "Pizza";
+            NfoodElemets.ImageSource = "Pizza";
 
-           // ColorChangeCommand = new Command(() =>
-           //{
-           //    lastElement.BackgroundColor = Color.White;
-           //    Element.BackgroundColor = Color.Gold;
-
-           //    lastElement = Element;
-           //});
+            ColorChangeCommand = new Command(() =>
+           {
+               
+           });
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -32,7 +32,7 @@
             <ColumnDefinition Width="100"/>
             <ColumnDefinition Width="100"/>
         </Grid.ColumnDefinitions>
-        <Image Source="{Binding BarElemets.Image}" 
+        <Image Source="{Binding BarElemets.ImageSource}" 
                    Grid.Row="3" 
                    Grid.Column="0"
                    Grid.ColumnSpan="2"
@@ -41,7 +41,7 @@
                 <TapGestureRecognizer Command="{Binding ColorChangeCommand}"/>
             </Image.GestureRecognizers> 
         </Image>
-        <Label Text="{Binding BarElemets.Title}" 
+        <Label Text="{Binding BarElemets.Title}"
                    Grid.Row="4" 
                    Grid.Column="0"
                    Grid.ColumnSpan="2"
@@ -51,7 +51,7 @@
                    Grid.Column="0"
                    Grid.ColumnSpan="2"
                    Style="{StaticResource FontStyleSub}"/>
-        <Image Source="{Binding DinnerElemets.Image}"
+        <Image Source="{Binding DinnerElemets.ImageSource}"
                     Grid.Row="3" 
                     Grid.Column="2"
                     Grid.ColumnSpan="3"
@@ -67,7 +67,7 @@
                      Grid.Column="2"
                      Grid.ColumnSpan="3"
                      Style="{StaticResource FontStyleSub}"/>
-        <Image Source="{Binding CafeElemets.Image}"
+        <Image Source="{Binding CafeElemets.ImageSource}"
                      Grid.Row="7" 
                      Grid.Column="0"
                      Grid.ColumnSpan="2"
@@ -85,7 +85,7 @@
                      Grid.ColumnSpan="2"
                      Style="{StaticResource FontStyleSub}"/>
 
-        <Image Source="{Binding MapElemets.Image}" 
+        <Image Source="{Binding MapElemets.ImageSource}" 
                      Grid.Row="7" 
                      Grid.Column="2"
                      Grid.ColumnSpan="4">
@@ -100,7 +100,7 @@
                      Grid.Column="2"
                      Grid.ColumnSpan="3"
                      Style="{StaticResource FontStyleSub}"/>
-        <Image Source="{Binding FfoodElemets.Image}" 
+        <Image Source="{Binding FfoodElemets.ImageSource}" 
                      Grid.Row="13" 
                      Grid.Column="0"
                      Grid.ColumnSpan="2"
@@ -116,7 +116,7 @@
                      Grid.Column="0"
                      Grid.ColumnSpan="2"
                      Style="{StaticResource FontStyleSub}"/>
-        <Image Source="{Binding NfoodElemets.Image}" 
+        <Image Source="{Binding NfoodElemets.ImageSource}" 
                      Grid.Row="13"
                      Grid.Column="2"
                      Grid.ColumnSpan="3"
