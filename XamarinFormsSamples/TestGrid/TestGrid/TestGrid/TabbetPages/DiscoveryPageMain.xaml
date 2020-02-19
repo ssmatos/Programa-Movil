@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TestGrid.DiscoveryPageMain" Title="Discovery" IconImageSource="Discovery">
+    
+        <Grid HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                 <RowDefinition Height="auto"/>
+                 <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="{Binding BarElemets.Image}" 
+                   Grid.Row="3" 
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   HeightRequest="150" >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ColorChangeCommand}"/>
+            </Image.GestureRecognizers> 
+        </Image>
+        <Label Text="{Binding BarElemets.Title}" 
+                   Grid.Row="4" 
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Style="{StaticResource FontStyle}"/>
+        <Label Text="{Binding BarElemets.SubTitle}" 
+                   Grid.Row="5" 
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Style="{StaticResource FontStyleSub}"/>
+        <Image Source="{Binding DinnerElemets.Image}"
+                    Grid.Row="3" 
+                    Grid.Column="2"
+                    Grid.ColumnSpan="3"
+                    HeightRequest="10">
+        </Image>
+        <Label Text="{Binding DinnerElemets.Title}" 
+                    Grid.Row="4" 
+                    Grid.Column="2"
+                    Grid.ColumnSpan="3"
+                    Style="{StaticResource FontStyle}"/>
+        <Label Text="{Binding DinnerElemets.SubTitle}" 
+                     Grid.Row="5" 
+                     Grid.Column="2"
+                     Grid.ColumnSpan="3"
+                     Style="{StaticResource FontStyleSub}"/>
+        <Image Source="{Binding CafeElemets.Image}"
+                     Grid.Row="7" 
+                     Grid.Column="0"
+                     Grid.ColumnSpan="2"
+                     HeightRequest="200"
+                     x:Name="MainCafe">
+        </Image>
+        <Label Text="{Binding CafeElemets.Title}" 
+                     Grid.Row="8"  
+                     Grid.Column="0"
+                     Grid.ColumnSpan="2"
+                     Style="{StaticResource FontStyle}"/>
+        <Label Text="{Binding DinnerElemets.SubTitle}" 
+                     Grid.Row="9" 
+                     Grid.Column="0"
+                     Grid.ColumnSpan="2"
+                     Style="{StaticResource FontStyleSub}"/>
+
+        <Image Source="{Binding MapElemets.Image}" 
+                     Grid.Row="7" 
+                     Grid.Column="2"
+                     Grid.ColumnSpan="4">
+        </Image>
+        <Label Text="{Binding MapElemets.Title}" 
+                     Grid.Row="8"  
+                     Grid.Column="2"
+                     Grid.ColumnSpan="3"
+                     Style="{StaticResource FontStyle}"/>
+        <Label Text="{Binding MapElemets.SubTitle}" 
+                     Grid.Row="9" 
+                     Grid.Column="2"
+                     Grid.ColumnSpan="3"
+                     Style="{StaticResource FontStyleSub}"/>
+        <Image Source="{Binding FfoodElemets.Image}" 
+                     Grid.Row="13" 
+                     Grid.Column="0"
+                     Grid.ColumnSpan="2"
+               HeightRequest="100">
+        </Image>
+        <Label Text="{Binding FfoodElemets.Title}" 
+                     Grid.Row="14" 
+                     Grid.Column="0"
+                     Grid.ColumnSpan="2"
+                     Style="{StaticResource FontStyle}"/>
+        <Label Text="{Binding FfoodElemets.SubTitle}" 
+                     Grid.Row="15" 
+                     Grid.Column="0"
+                     Grid.ColumnSpan="2"
+                     Style="{StaticResource FontStyleSub}"/>
+        <Image Source="{Binding NfoodElemets.Image}" 
+                     Grid.Row="13"
+                     Grid.Column="2"
+                     Grid.ColumnSpan="3"
+                     HeightRequest="100">
+        </Image>
+        <Label Text="{Binding NfoodElemets.Title}" 
+                     Grid.Row="14"  
+                     Grid.Column="2"
+                     Grid.ColumnSpan="3"
+                     Style="{StaticResource FontStyle}"/>
+        <Label Text="{Binding NfoodElemets.SubTitle}" 
+                     Grid.Row="15"  
+                     Grid.Column="2"
+                     Grid.ColumnSpan="3"
+                     Style="{StaticResource FontStyleSub}"/>
+
+    </Grid>
+ </ContentPage>

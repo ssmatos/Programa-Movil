@@ -35,7 +35,7 @@
                     Grid.Column="3"
                        FontSize="25">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="HighwayToSignUp"/>
+                        <TapGestureRecognizer Command="{Binding SignUpCommand}"/>
                     </Label.GestureRecognizers>
                 </Label>
                 <Image Source="ic_person" 
@@ -49,11 +49,13 @@
                 <Entry Placeholder="Username or Email Address"
                    Grid.Row="10"
                    Grid.Column="0"
+                   Text="{Binding Mail}"
                    x:Name="mail"
                    Grid.ColumnSpan="4"/>
                 <Entry Placeholder="Password"
-                   IsPassword="True"
+                   IsPassword="{Binding IsPassword}"
                    x:Name="EntryPass"
+                       Text="{Binding EntryPass}"
                    Grid.Row="11"
                    Grid.Column="0" 
                    Grid.ColumnSpan="4"/>
@@ -64,7 +66,7 @@
                    HorizontalOptions="EndAndExpand"
                    HeightRequest="30">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="PasswordVisibility"/>
+                        <TapGestureRecognizer Command="{Binding VisibilityCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
                 <Button Text="Log in"
@@ -73,7 +75,7 @@
                     Grid.ColumnSpan="2" 
                     CornerRadius="30" 
                     ImageSource="check"
-                    Clicked="ConfirmationLog">
+                    Command="{Binding ConfirmLoginCommand}">
                 </Button>
                 <Label Text="Login with" 
                    Grid.Row="15"
