@@ -47,32 +47,32 @@
 
             <Entry Placeholder="Email Address"
                 Grid.Row="5"
-                   Text="{Binding Email}"
+                   Text="{Binding User.Email}"
                 Grid.Column="0"
                Grid.ColumnSpan="5" />
 
             <Entry Placeholder="Username"
                 Grid.Row="6"
-                   Text="{Binding User}"
+                   Text="{Binding User.User}"
                 Grid.Column="0"
                Grid.ColumnSpan="5" />
 
             <Entry Placeholder="Password"
-                   IsPassword="{Binding IsPassword}"
-                   Text="{Binding Pass}"
+                   IsPassword="{Binding User.IsPassword}"
+                   Text="{Binding User.Pass}"
                 Grid.Row="7"
                Grid.RowSpan="1"
                 Grid.Column="0"
                Grid.ColumnSpan="5" />
 
             <Entry Placeholder="Repeat Password"
-                   IsPassword="{Binding IsPassword}"
-                   Text="{Binding Rpass}"
+                   IsPassword="{Binding User.IsPassword}"
+                   Text="{Binding User.Rpass}"
                 Grid.Row="8"
                 Grid.Column="0"
                Grid.ColumnSpan="5" />
 
-            <Image Source="{Binding Image}"
+            <Image Source="{Binding User.Image}"
                    Grid.Row="7"
                    Grid.Column="4"
                    HorizontalOptions="EndAndExpand"
@@ -82,7 +82,7 @@
                 </Image.GestureRecognizers> 
             </Image>
 
-            <Image Source="{Binding Image}"
+            <Image Source="{Binding User.Image}"
                    Grid.Row="8"
                    Grid.Column="4"
                    HorizontalOptions="EndAndExpand"

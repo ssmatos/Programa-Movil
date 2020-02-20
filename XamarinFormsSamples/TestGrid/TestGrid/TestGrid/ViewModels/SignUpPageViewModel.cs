@@ -5,6 +5,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Linq;
+using TestGrid.Models;
 using System.Threading.Tasks;
 using System.ComponentModel;
 
@@ -12,19 +13,14 @@ namespace TestGrid.ViewModels
 {
     public class SignUpPageViewModel : INotifyPropertyChanged
     {
-        public string Email { get; set; }
-        public string User { get; set; }
-        public string Pass { get; set; }
-        public string Rpass { get; set; }
-        public string Image { get; set; }
-        public bool IsPassword { get; set; } = true;
+        public SignUpPageModel User { get; set; } = new SignUpPageModel();
         public Command VisibilityCommand { get; set; }
         public Command LoginCommand { get; set; }
         public Command ConfirmationSignUp { get; set; }
 
         public SignUpPageViewModel()
         {
-
+            User.Image = "PasswordEye";
             LoginCommand = new Command(async () =>
             {
                 await App.Current.MainPage.Navigation.PushAsync(new LoginPage());
@@ -32,7 +28,7 @@ namespace TestGrid.ViewModels
 
             ConfirmationSignUp = new Command(async () =>
             {
-                if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(User) || string.IsNullOrEmpty(Pass) || string.IsNullOrEmpty(Rpass))
+                if (string.IsNullOrEmpty(User.Email) || string.IsNullOrEmpty(User.User) || string.IsNullOrEmpty(User.Pass) || string.IsNullOrEmpty(User.Rpass))
                 {
                     await App.Current.MainPage.DisplayAlert("Alert", "Null Entries", "OK");
                 }
@@ -43,14 +39,14 @@ namespace TestGrid.ViewModels
             });
             VisibilityCommand = new Command(() =>
             {
-                IsPassword = !IsPassword ? true : false;
-                if (IsPassword)
+                User.IsPassword = !User.IsPassword ? true : false;
+                if (User.IsPassword)
                 {
-                    Image = "PasswordEye";
+                    User.Image = "PasswordEye";
                 }
                 else
                 {
-                    Image = "Hide";
+                    User.Image = "Hide";
                 }
             });
         }

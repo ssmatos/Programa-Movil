@@ -21,12 +21,9 @@ namespace TestGrid.ViewModels
         public MenuElements MapElemets { get; set; } = new MenuElements();
         public MenuElements FfoodElemets { get; set; } = new MenuElements();
         public MenuElements NfoodElemets { get; set; } = new MenuElements();
-
-        public Command ColorChangeCommand { get; set;}
-
         public DiscoveryPageViewModel()
         {
-
+            
             BarElemets.Title = "Bar & Hotels";
             BarElemets.SubTitle = "42 Places";
             BarElemets.ImageSource = "icons8beer96";
@@ -44,17 +41,12 @@ namespace TestGrid.ViewModels
             MapElemets.ImageSource = "Nearby";
 
             FfoodElemets.Title = "Fast Foods";
-            FfoodElemets.SubTitle = "29 Places";
+            FfoodElemets.SubTitle  = "29 Places";
             FfoodElemets.ImageSource = "FastFood";
 
             NfoodElemets.Title = "Featured Food";
             NfoodElemets.SubTitle = "21 Places";
             NfoodElemets.ImageSource = "Pizza";
-
-            ColorChangeCommand = new Command(() =>
-           {
-               
-           });
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

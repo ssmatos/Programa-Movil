@@ -6,26 +6,24 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Linq;
 using System.Threading.Tasks;
+using TestGrid.Models;
 using System.ComponentModel;
 
 namespace TestGrid.ViewModels
 {
     public class LoginPageViewModel : INotifyPropertyChanged
     {
-        public string Mail { get; set; }
-        public string EntryPass { get; set; }
-        public bool IsPassword { get; set; }
-        public string Image { get; set; }
+        public LoginPageModel Username { get; set; } = new LoginPageModel();
         public Command ConfirmLoginCommand { get; set; }
         public Command SignUpCommand { get; set; }
         public Command VisibilityCommand { get; set; }
 
         public LoginPageViewModel()
         {
-            Image = "PasswordEye";
+            Username.Image = "PasswordEye";
             ConfirmLoginCommand = new Command(async() =>
             {
-                if (string.IsNullOrEmpty(Mail) || string.IsNullOrEmpty(EntryPass))
+                if (string.IsNullOrEmpty(Username.Mail) || string.IsNullOrEmpty(Username.EntryPass))
                 {
                     await App.Current.MainPage.DisplayAlert("Alert", "Null Entries", "OK");
                 }
@@ -37,19 +35,19 @@ namespace TestGrid.ViewModels
 
             SignUpCommand = new Command(async () =>
             {
-                await App.Current.MainPage.Navigation.PushAsync(new SignUpPage(Mail));
+                await App.Current.MainPage.Navigation.PushAsync(new SignUpPage());
             });
 
             VisibilityCommand = new Command(() =>
             {
-                IsPassword = !IsPassword ? true : false;
-                if (IsPassword)
+                Username.IsPassword = !Username.IsPassword ? true : false;
+                if (Username.IsPassword)
                 {
-                    Image = "PasswordEye";
+                    Username.Image = "PasswordEye";
                 }
                 else
                 {
-                    Image = "Hide";
+                    Username.Image = "Hide";
                 }
             });
 

@@ -56,6 +56,9 @@
                     Grid.Column="2"
                     Grid.ColumnSpan="3"
                     HeightRequest="10">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ColorChangeCommand1}"/>
+            </Image.GestureRecognizers>
         </Image>
         <Label Text="{Binding DinnerElemets.Title}" 
                     Grid.Row="4" 
@@ -73,6 +76,9 @@
                      Grid.ColumnSpan="2"
                      HeightRequest="200"
                      x:Name="MainCafe">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ColorChangeCommand2}"/>
+            </Image.GestureRecognizers>
         </Image>
         <Label Text="{Binding CafeElemets.Title}" 
                      Grid.Row="8"  
@@ -89,6 +95,9 @@
                      Grid.Row="7" 
                      Grid.Column="2"
                      Grid.ColumnSpan="4">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ColorChangeCommand3}"/>
+            </Image.GestureRecognizers>
         </Image>
         <Label Text="{Binding MapElemets.Title}" 
                      Grid.Row="8"  
@@ -105,6 +114,9 @@
                      Grid.Column="0"
                      Grid.ColumnSpan="2"
                HeightRequest="100">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ColorChangeCommand4}"/>
+            </Image.GestureRecognizers>
         </Image>
         <Label Text="{Binding FfoodElemets.Title}" 
                      Grid.Row="14" 
@@ -121,6 +133,9 @@
                      Grid.Column="2"
                      Grid.ColumnSpan="3"
                      HeightRequest="100">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ColorChangeCommand5}"/>
+            </Image.GestureRecognizers>
         </Image>
         <Label Text="{Binding NfoodElemets.Title}" 
                      Grid.Row="14"  

@@ -12,10 +12,9 @@ namespace TestGrid
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SignUpPage : ContentPage
     {
-        public SignUpPage(string Mail = "")
+        public SignUpPage()
         {
             InitializeComponent();
-            Email.Text = Mail;
             BindingContext = new SignUpPageViewModel();
         }
 

@@ -11,12 +11,11 @@ using System.ComponentModel;
 
 namespace TestGrid.Models
 {
-    class MenuElements
+    public class LoginPageModel
     {
-        public string Title { get; set; }
-        public string SubTitle { get; set; }
-        //public string Image { get; set; }
-        public Object ImageSource { get; set;}
-        public string color { get; set; }
+        public string Mail { get; set; }
+        public string EntryPass { get; set; }
+        public bool IsPassword { get; set; }
+        public string Image { get; set; }
     }
 }
